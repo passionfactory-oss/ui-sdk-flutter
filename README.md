@@ -1,5 +1,8 @@
 # ui_sdk_flutter
 
+[![CI](https://github.com/passionfactory-oss/ui-sdk-flutter/actions/workflows/ci.yml/badge.svg)](https://github.com/passionfactory-oss/ui-sdk-flutter/actions/workflows/ci.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](./LICENSE)
+
 An unofficial Flutter port of [UI SDK](https://github.com/vercel-labs/ui): a library of behaviors for agents to build user interfaces with. Keyboard navigation, focus, selection, dismissal, popups and the semantics they need, as building blocks for any component, with a testing kit and an agent bridge.
 
 This project is not affiliated with or endorsed by Vercel.
@@ -26,7 +29,7 @@ fvm flutter analyze
 cd packages/ui_sdk_flutter && fvm flutter test
 ```
 
-Read [ARCHITECTURE.md](ARCHITECTURE.md) for how the code is shaped, and [docs/adr/](docs/adr/index.md) for why.
+Read [ARCHITECTURE.md](ARCHITECTURE.md) for how the code is shaped, and [docs/adr/](docs/adr/index.md) for why. To contribute, start with [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 

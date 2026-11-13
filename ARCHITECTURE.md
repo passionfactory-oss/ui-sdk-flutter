@@ -119,7 +119,7 @@ These are the rules new code follows. Except for language, license and toolchain
 
 **Language and license**: code and docs are English. The project is Apache-2.0 and credits upstream in `NOTICE`. See [ADR-0001](docs/adr/0001-unofficial-port-name-and-license.md).
 
-**Toolchain**: `.fvmrc` pins Flutter 3.41.9 for development. The pubspecs declare Dart `^3.8.0` and Flutter 3.32 or later, but only 3.41.9 has been tested. _TODO: test the lower bound in CI, or raise it._
+**Toolchain**: `.fvmrc` pins Flutter 3.41.9 for development. The pubspecs declare Dart `^3.8.0` and Flutter 3.32 or later, and CI (`.github/workflows/ci.yml`) checks both the pinned version and 3.32.x. The workspace resolves every package together, and `flutter_test` pins some packages to the SDK's own versions, so a dependency of `ui_sdk_flutter_mcp` must accept the version the oldest supported Flutter pins. For `vm_service` that is 15.0.0 on Flutter 3.32.
 
 ---
 
