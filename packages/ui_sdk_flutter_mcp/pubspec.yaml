@@ -1,0 +1,13 @@
+name: ui_sdk_flutter_mcp
+description: >-
+  MCP server that lets coding agents read and operate a running app built with
+  ui_sdk_flutter through its agent bridge.
+version: 0.0.1
+resolution: workspace
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  dart_mcp: ^0.5.2
+  vm_service: ^15.4.0

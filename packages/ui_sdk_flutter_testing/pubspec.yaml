@@ -1,0 +1,17 @@
+name: ui_sdk_flutter_testing
+description: >-
+  Checks components built with ui_sdk_flutter against their accessibility
+  patterns: keyboard, focus, semantics and right to left.
+version: 0.0.1
+resolution: workspace
+
+environment:
+  sdk: ^3.8.0
+  flutter: ">=3.32.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  ui_sdk_flutter: ^0.0.1

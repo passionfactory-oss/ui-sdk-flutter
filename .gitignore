@@ -1,0 +1,9 @@
+.dart_tool/
+build/
+coverage/
+doc/api/
+.fvm/
+.idea/
+*.iml
+.DS_Store
+.claude/settings.local.json
