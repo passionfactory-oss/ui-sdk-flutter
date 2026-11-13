@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  check:
+    name: Check (${{ matrix.name }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: pinned
+            version-file: .fvmrc
+          - name: minimum
+            flutter-version: 3.32.x
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          channel: stable
+          flutter-version: ${{ matrix.flutter-version || '' }}
+          flutter-version-file: ${{ matrix.version-file || '' }}
+          cache: true
+
+      - run: flutter --version
+
+      - run: flutter pub get
+
+      - name: Check formatting
+        if: matrix.name == 'pinned'
+        run: dart format --output=none --set-exit-if-changed .
+
+      - run: flutter analyze
+
+      - name: Test
+        working-directory: packages/ui_sdk_flutter
+        run: flutter test
