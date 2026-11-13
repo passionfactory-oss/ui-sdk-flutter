@@ -26,7 +26,7 @@ fvm flutter analyze
 cd packages/ui_sdk_flutter && fvm flutter test
 ```
 
-Read [ARCHITECTURE.md](ARCHITECTURE.md) for how the code is shaped, and [docs/adr/](docs/adr/index.md) for why.
+Read [ARCHITECTURE.md](ARCHITECTURE.md) for how the code is shaped, and [docs/adr/](docs/adr/index.md) for why. To contribute, start with [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
