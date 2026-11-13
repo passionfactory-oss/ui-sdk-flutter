@@ -3,6 +3,7 @@ description: >-
   Unofficial Flutter port of UI SDK: tested UI behaviors (focus, keyboard,
   selection, popups, semantics) for people and agents to build components on.
 version: 0.0.1
+repository: https://github.com/passionfactory-oss/ui-sdk-flutter/tree/main/packages/ui_sdk_flutter
 resolution: workspace
 
 environment:

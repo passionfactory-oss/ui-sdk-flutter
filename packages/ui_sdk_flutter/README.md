@@ -2,7 +2,7 @@
 
 Behaviors and primitives for building accessible Flutter components, made for agents. An unofficial Flutter port of [UI SDK](https://github.com/vercel-labs/ui).
 
-This package is a pre-release skeleton. Only the primitive kernel exists so far. See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the plan.
+This package is a pre-release skeleton. Only the primitive kernel exists so far. See [ARCHITECTURE.md](https://github.com/passionfactory-oss/ui-sdk-flutter/blob/main/ARCHITECTURE.md) for the plan.
 
 ## Define a primitive
 
